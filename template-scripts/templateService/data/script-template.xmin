@@ -1,0 +1,5 @@
+/soapenv:Envelope/soapenv:Header=22 2
+/soapenv:Envelope/soapenv:Body/acc:script-template/callContext/additionalContext/additionalContext/tag=1|3|4|10
+/soapenv:Envelope/soapenv:Body/acc:script-template/callContext/additionalContext/additionalContext/value=10|30|40
+/soapenv:Envelope/soapenv:Body/acc:script-template/sourceAccount/idInfo/idInfo/tag=3|3|4|0
+/soapenv:Envelope/soapenv:Body/acc:script-template/sourceAccount/idInfo/idInfo/value=6|7|8

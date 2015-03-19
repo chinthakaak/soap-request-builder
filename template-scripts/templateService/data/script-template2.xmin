@@ -1,0 +1,8 @@
+/soapenv:Envelope/soapenv:Body/acc:script-template2/sourceAccount/billingAccountNumber=0
+/soapenv:Envelope/soapenv:Body/acc:script-template2/sourceAccount/created=99
+/soapenv:Envelope/soapenv:Body/acc:script-template2/sourceAccount/idInfo/idInfo/tag=000
+/soapenv:Envelope/soapenv:Header=htt
+/soapenv:Envelope/soapenv:Header
+/soapenv:Envelope/soapenv:Body/acc:script-template2/callContext/additionalContext/additionalContext/tag
+/soapenv:Envelope/soapenv:Body/acc:script-template2/callContext/additionalContext/additionalContext/value
+/soapenv:Envelope/soapenv:Body/acc:script-template2/callContext/authenticationKey

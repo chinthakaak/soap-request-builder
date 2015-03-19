@@ -1,0 +1,45 @@
+<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:acc="http://account.api.pse.aepona.com/">
+  <soapenv:Header>22 2</soapenv:Header>
+  <soapenv:Body>
+    <acc:script-template>
+      <callContext>
+        <additionalContext>
+          <additionalContext>
+            <tag>1</tag>
+            <value>10</value>
+          </additionalContext>
+          <additionalContext>
+            <value>30</value>
+            <tag>3</tag>
+          </additionalContext>
+          <additionalContext>
+            <value>40</value>
+            <tag>4</tag>
+          </additionalContext>
+          <additionalContext>
+            <tag>10</tag>
+          </additionalContext>
+        </additionalContext>
+      </callContext>
+      <sourceAccount>
+        <idInfo>
+          <idInfo>
+            <tag>3</tag>
+            <value>6</value>
+          </idInfo>
+          <idInfo>
+            <value>7</value>
+            <tag>3</tag>
+          </idInfo>
+          <idInfo>
+            <value>8</value>
+            <tag>4</tag>
+          </idInfo>
+          <idInfo>
+            <tag>0</tag>
+          </idInfo>
+        </idInfo>
+      </sourceAccount>
+    </acc:script-template>
+  </soapenv:Body>
+</soapenv:Envelope>
