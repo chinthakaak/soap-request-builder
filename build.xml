@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project>
+    <property file="project.properties"/>
+
+
+
+    <path id="build-classpath">
+        <fileset dir="lib">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <path id="test-classpath">
+        <!--<dirset dir="target/classes">-->
+            <!--<include name="**"/>-->
+        <!--</dirset>-->
+        <pathelement location="lib/junit-4.9b2.jar"/>
+        <pathelement location="target/classes"/>
+        <pathelement location="target/tests"/>
+    </path>
+
+    <!--<pathconvert property="manifest-classpath" pathsep=" ">-->
+        <!--<path refid="build-classpath"/>-->
+        <!--<flattenmapper />-->
+    <!--</pathconvert>-->
+
+    <pathconvert property="manifest-classpath" pathsep=" ">
+        <path refid="build-classpath"/>
+        <mapper>
+            <chainedmapper>
+                <flattenmapper/>
+                <globmapper from="*.jar" to="../lib/*.jar"/>
+            </chainedmapper>
+        </mapper>
+    </pathconvert>
+
+    <target name="clean">
+        <delete dir="target"/>
+        <delete dir="dist"/>
+    </target>
+
+    <target name="layout" depends="clean">
+        <mkdir dir="target/classes"/>
+        <mkdir dir="target/tests"/>
+        <mkdir dir="target/test-reports"/>
+        <mkdir dir="target/dist"/>
+    </target>
+    <target name="compile" depends="layout">
+        <javac srcdir="src" destdir="target/classes">
+            <classpath refid="build-classpath"/>
+        </javac>
+    </target>
+
+    <target name="build">
+
+    </target>
+    <target name="dist" depends="test">
+        <jar destfile="target/dist/wsdl-utils-1.0.jar"
+             basedir="target/classes"
+             includes="**"
+             excludes="target/classes/**/Test.class">
+            <!--<zipgroupfileset dir="lib" includes="*.jar"/>-->
+
+            <manifest>
+                <attribute name="Main-Class" value="com.aepona.curlws.WsdlAnalyzer"/>
+                <attribute name="Class-Path" value="${manifest-classpath}"/>
+            </manifest>
+        </jar>
+    </target>
+    <target name="local-deploy" depends="dist">
+        <!--<delete dir="${project.deploy.location}"/>-->
+        <!--<mkdir dir="${project.deploy.location}/lib"/>-->
+        <!--<copy todir="${project.deploy.location}/lib" >-->
+            <!--<libfileset dir="lib" includes="*.jar"/>-->
+        <!--</copy>-->
+
+        <copy todir="bin">
+            <fileset dir="target/dist" includes="*.jar"/>
+        </copy>
+
+        <chmod file="bin/wsdl-utils-1.0.jar" perm="+x"/>
+
+    </target>
+
+    <target name="test-compile" depends="compile">
+        <javac srcdir="tests" destdir="target/tests">
+            <classpath refid="build-classpath"/>
+            <classpath refid="test-classpath"/>
+        </javac>
+    </target>
+
+    <target name="test" depends="test-compile">
+        <junit>
+            <classpath refid="build-classpath"/>
+            <classpath refid="test-classpath"/>
+            <!--<classpath>-->
+                <!--<pathelement location="lib/junit-4.9b2.jar"/>-->
+                <!--<pathelement location="target/classes"/>-->
+                <!--<pathelement location="target/tests"/>-->
+            <!--</classpath>-->
+            <formatter type="xml"/>
+            <batchtest fork="yes" todir="target/test-reports">
+                <fileset dir="tests">
+                    <include name="**/*Test*"/>
+                </fileset>
+            </batchtest>
+            <formatter type="brief" usefile="false"/>
+        </junit>
+
+        <junitreport todir="target/test-reports">
+            <fileset dir="target/test-reports">
+                <include name="TEST-*.xml"/>
+            </fileset>
+            <report format="frames" todir="target/test-reports"/>
+        </junitreport>
+    </target>
+</project>
