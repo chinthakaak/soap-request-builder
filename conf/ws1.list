@@ -1,0 +1,17 @@
+http://localhost:8080/api-responder/consumerManagement
+http://localhost:8080/api-responder/partnerProvisioning
+http://localhost:8080/api-responder/serviceProviderManagement
+http://localhost:8080/api-responder/userApplicationAccessManagement
+http://localhost:8080/api-responder/campaignManagement
+http://localhost:8080/api-responder/eventValidationManagement
+http://localhost:8080/api-responder/mandateManagement
+http://localhost:8080/api-responder/accountManagement
+http://localhost:8080/api-responder/settlementManagement
+http://localhost:8080/api-responder/rbacManagement
+http://localhost:8080/api-responder/reportManagement
+http://localhost:8080/api-responder/systemManagement
+http://localhost:8080/api-responder/transactionManagement
+http://localhost:8080/merchant-responder/merchantPayment/v2
+http://localhost:8080/merchant-responder/merchantPayment/v1
+http://localhost:8080/merchant-responder/merchantSubscription/v1
+http://localhost:8080/merchant-responder/partnerPromotion/v1
