@@ -62,7 +62,7 @@
             <!--<zipgroupfileset dir="lib" includes="*.jar"/>-->
 
             <manifest>
-                <attribute name="Main-Class" value="com.aepona.curlws.WsdlAnalyzer"/>
+                <attribute name="Main-Class" value="com.akc.curlws.WsdlAnalyzer"/>
                 <attribute name="Class-Path" value="${manifest-classpath}"/>
             </manifest>
         </jar>
