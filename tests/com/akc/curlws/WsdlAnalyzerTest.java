@@ -1,4 +1,4 @@
-package com.aepona.curlws;
+package com.akc.curlws;
 
 import org.junit.Test;
 

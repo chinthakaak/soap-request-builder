@@ -1,4 +1,4 @@
-package com.aepona.curlws;
+package com.akc.curlws;
 
 
 import com.eviware.soapui.impl.wsdl.WsdlInterface;
