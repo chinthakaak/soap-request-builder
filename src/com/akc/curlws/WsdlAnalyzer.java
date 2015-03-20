@@ -14,7 +14,7 @@ import java.util.Arrays;
 
 public class WsdlAnalyzer {
     public static boolean TESTMODE = false;
-    public static int URL_START_POSITION=4;
+    public static int URL_START_POSITION=3;
     public static String REQUESTS_FOLDER="requests";
 
     public static void main(String[] endpoints) throws Exception {
@@ -69,8 +69,12 @@ public class WsdlAnalyzer {
 //                fileName+=newArray[i]+".";
 //            }
 
-            serviceFolderStr+="."+newArray[i];
+//            serviceFolderStr+="-"+newArray[i];
+            serviceFolderStr+=newArray[i];
+
         }
+        serviceFolderStr=serviceFolderStr.replaceAll("[^a-zA-Z0-9]+","");
+//        System.out.println("$$$$$$$$$$$$$$$$$$$$"+serviceFolderStr);
         serviceFolder = new File(REQUESTS_FOLDER + "/"+serviceFolderStr);
         serviceFolder.mkdir();
 

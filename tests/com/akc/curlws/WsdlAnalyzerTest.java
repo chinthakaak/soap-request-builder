@@ -11,7 +11,8 @@ public class WsdlAnalyzerTest {
         WsdlAnalyzer.TESTMODE=true;
         WsdlAnalyzer waz = new WsdlAnalyzer();
 //        waz.main(new String[]{"http://localhost:8080/merchant-responder/merchantSubscription/v1"});
-        waz.main(new String[]{"http://jango:8080/api-responder/consumerManagement/v1"});
+        //waz.main(new String[]{"http://jango:8080/api-responder/consumerManagement/v1"});
+        waz.main(new String[]{"http://www.webservicex.net/globalweather.asmx"});
 
     }
 

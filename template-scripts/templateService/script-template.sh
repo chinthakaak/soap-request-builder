@@ -189,12 +189,21 @@ sendrequest(){
     while read -r url || [[ -n $url ]];
     do
         folder=${PWD##*/};
+        folderx=${folder%.*}
 	    slash=/
-        result=${folder//./$slash}
+        result=${folderx//./$slash}
 
-        if [[ $url == *"$result"* ]];
+        folder=${PWD##*/};
+        foldercomp=`echo $folder | tr -dc '[:alnum:]\n\r'`
+        urlcomp=`echo $url | tr -dc '[:alnum:]\n\r'`
+
+#        echo $foldercomp
+#        echo $urlcomp
+        if [[ $urlcomp == *"$foldercomp"* ]];
+
+#        if [[ $url == *"$result"* ]];
         then
-            curl -d @data/$bname-request.xml $url > data/$bname-response.xml -H "Content-Type:text/xml"
+            curl -d @data/$bname-request.xml $url > data/$bname-response.xml -H "Content-Type:text/xml" --proxy ""
             xmlstarlet tr ../../conf/nsremove.xsl data/$bname-response.xml > data/$bname-response-nons.xml
 
             xmlstarlet tr ../../conf/transformer.xsl data/$bname-response-nons.xml > data/$bname-response.xall
@@ -204,11 +213,13 @@ sendrequest(){
             printf "===================\n"
             while IFS= read -r line; do
                 value=`xmlstarlet sel -T -t -c $line data/$bname-response-nons.xml`
-                printf "$linecount.${GREEN}${b} ${line##*$bname}=${BLUE}$value${n}${NONE}\n";
+#                printf "$linecount.${GREEN}${b} ${line##*$bname}=${BLUE}$value${n}${NONE}\n";
+                echo "$linecount. ${line##*$bname}=${b}$value${n}";
+
                 linecount+=1;
             done < data/$bname-response.xall
         fi
-    done < "../../conf/ws1.list"
+    done < "../../conf/ws.list"
 
     ## Restore backups if any
     if [[  ${#qarray[@]} > 0 && ${#qarray[@]} -eq $qlcount ]];
