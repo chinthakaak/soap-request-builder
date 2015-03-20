@@ -1,1 +1,1 @@
-# soap-request-builder
+As the name suggests, this automatically generate soap requests for given set of soap webservice endpoints. At the first glance of it, you would think that this is not a new concept - soapui would do the job easily.
