@@ -35,10 +35,20 @@ soap-request-builder software requires Linux OS and this has been tested in Cent
 #Your First SOAP Request
 After the successful installation of soap-request-builder command line interface(CLI) application, you are ready to execute your first soap request using the terminal.
 
-There are two free web service endpoints have been pre-configured for testing and getting started with this CLI.
+There are two free web service endpoints have been pre-configured for testing and getting started with this CLI. These have been set in `conf/ws.list` file.
 
 1. http://www.predic8.com:8080/crm/CustomerService
+
 2. http://www.webservicex.net/globalweather.asmx
 
-## Testing CustomerService web service endpoint
+You need to follow below steps to test the CustomerService web endpoint.
 
+1. `cd scripts/crmCustomerService/`
+
+2. `./get.sh -l`
+
+3. `./get.sh -add 2=1`
+
+4. `./get.sh`
+
+You will see the soap response as follows.
