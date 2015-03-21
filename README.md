@@ -47,7 +47,8 @@ You need to follow below steps to test the CustomerService web endpoint.
 
 2. `./get.sh -l`
 
-![](https://github.com/chinthakaak/soap-request-builder/tree/master/images)
+![](https://github.com/chinthakaak/soap-request-builder/tree/master/images/get.png)
+
 3. `./get.sh -add 2=1`
 
 4. `./get.sh`
