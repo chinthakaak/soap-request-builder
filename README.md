@@ -51,6 +51,11 @@ You need to follow below steps to test the CustomerService web endpoint.
 
 3. `./get.sh -add 2=1`
 
+![getadd](images/getadd.png)
+
 4. `./get.sh`
 
 You will see the soap response as follows.
+
+![getreq](images/getreq.png)
+
