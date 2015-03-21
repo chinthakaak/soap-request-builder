@@ -22,7 +22,6 @@ A command line interface for soap request sending.
 6. Execute local installation shell script from /home/srbuser/soap-ui-builder/ location.
 
    e.g. ./local-clean-install.sh
-##Deployment
 
 #Your First SOAP Request
 
