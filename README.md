@@ -12,9 +12,12 @@ A command line interface for soap request sending
     3. ant
     4. java
 2. Download soapui 5.0 and unzip to a tempory folder.
+   e.g. /tmp/soapui/
 3. Pull the master branch of the soap-ui-builder software from github to a local folder.
-   e.g. p
-4. Copy all jar files from the soapui/lib folder to 
+   e.g. /home/srbuser/soap-ui-builder/
+4. Copy all soapui library jar files from the /tmp/soapui/lib folder to /home/srbuser/soap-ui-builder/lib folder
+5. Copy soapui executable jar file from /tmp/soapui/soapui.jar to /home/srbuser/soap-ui-builder/lib folder
+6. 
 3. 
  
 
