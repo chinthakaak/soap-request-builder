@@ -37,7 +37,7 @@ After the successful installation of soap-request-builder command line interface
 
 There are two free web service endpoints have been pre-configured for testing and getting started with this CLI. These have been set in `conf/ws.list` file.
 
-All the service methods for the list of services is auto generated as shell scripts in `scripts` folder and those can be customized using various command line options.
+All the service methods for the list of services are auto generated as shell scripts in `scripts` folder and those can be customized using various command line options.
 
 1. http://www.predic8.com:8080/crm/CustomerService
 
