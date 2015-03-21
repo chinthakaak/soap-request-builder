@@ -15,26 +15,13 @@ A command line interface for soap request sending.
 
    e.g. /tmp/soapui/
 3. Pull the master branch of the soap-ui-builder software from github to a local folder.
+
    e.g. /home/srbuser/soap-ui-builder/
 4. Copy all soapui library jar files from the /tmp/soapui/lib folder to /home/srbuser/soap-ui-builder/lib folder
 5. Copy soapui executable jar file from /tmp/soapui/soapui.jar to /home/srbuser/soap-ui-builder/lib folder
-6. 
-3. 
- 
+6. Execute local installation shell script from /home/srbuser/soap-ui-builder/ location.
 
-1. soapui
-2. xmlstarlet
-3. curl
-4. ant
-5. java
-
-##Installation
-##Prerequisites
-
-
-
-2. 
-3. in
+   e.g. ./local-clean-install.sh
 ##Deployment
 
 #Your First SOAP Request
