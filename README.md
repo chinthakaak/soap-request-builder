@@ -14,7 +14,7 @@ soap-request-builder software requires Linux OS and this has been tested in Cent
     5. junit - tested version is 4.9b2
     6. soapui - tested version 5.0.0
 
-2. Pull the master branch of the soap-ui-builder software from github to a local folder
+2. Pull the master branch of the soap-request-builder software from github to a local folder
 
    `cd /home/srbuser/soap-request-builder/`
    
