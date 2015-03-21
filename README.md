@@ -1,9 +1,22 @@
 #SOAP Request Builder
 A command line interface for soap request sending
 
-#Installation Instructions
+#Installation
 ##Prerequisites
-Following software need to be installed to get this working
+1. This software requires Linux OS and this has been tested in CentOS 6.6 only.
+
+##Installation Steps
+1. Download and install following software from the web.
+    1. xmlstarlet
+    2. curl
+    3. ant
+    4. java
+2. Download soapui 5.0 and unzip to a tempory folder.
+3. Pull the master branch of the soap-ui-builder software from github to a local folder.
+   e.g. p
+4. Copy all jar files from the soapui/lib folder to 
+3. 
+ 
 
 1. soapui
 2. xmlstarlet
@@ -13,10 +26,10 @@ Following software need to be installed to get this working
 
 ##Installation
 ##Prerequisites
-1. This software requres Linux OS. this has been tested in CentOS 6.6 only.
 
 
-2. Download soapui 5.0 and unzip to a tempory folder.
+
+2. 
 3. in
 ##Deployment
 
