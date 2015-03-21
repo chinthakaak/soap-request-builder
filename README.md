@@ -33,9 +33,12 @@ soap-request-builder software requires Linux OS and this has been tested in Cent
     `./local-clean-install.sh`
 
 #Your First SOAP Request
+After the successful installation of soap-request-builder command line interface(CLI) application, you are ready to execute your first soap request using the terminal.
 
-#Testing
+There are two free web service endpoints have been pre-configured for testing and getting started with this CLI.
 
-#Features
+1. http://www.predic8.com:8080/crm/CustomerService
+2. http://www.webservicex.net/globalweather.asmx
 
-#Limitations
+## Testing CustomerService web service endpoint
+
