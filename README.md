@@ -16,6 +16,7 @@ soap-request-builder software requires Linux OS and this has been tested in Cent
 2. Pull the master branch of the soap-ui-builder software from github to a local folder
 
    `cd /home/srbuser/soap-request-builder/`
+   
    `git pull https://github.com/chinthakaak/soap-request-builder.git`
 3. Copy all the soapui lib jar files from soapui installation location to lib folder
 
