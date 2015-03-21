@@ -13,19 +13,19 @@ soap-request-builder software requires Linux OS and this has been tested in Cent
     4. java - tested version is 1.7
     5. soapui - tested version 5.0.0
 
-3. Pull the master branch of the soap-ui-builder software from github to a local folder.
+3. Pull the master branch of the soap-ui-builder software from github to a local folder (e.g. /home/srbuser/soap-request-builder/)
 
-git init
-git pull 
-e.g. /home/srbuser/soap-request-builder/
-4. Copy all the soapui lib jar files from soapui installation location.
+git pull https://github.com/chinthakaak/soap-request-builder.git
 
-e.g. cp /data/SmartBear/SoapUI-5.0.0/lib/*.jar /home/srbuser/soap-request-builder/lib
-5. Copy soapui executable jar file to 
-e.g. cp /data/SmartBear/SoapUI-5.0.0/bin/soapui-5.0.0.jar /home/srbuser/soap-request-builder/lib
-6. Execute local installation shell script from /home/srbuser/soap-ui-builder/ location.
+4. Copy all the soapui lib jar files from soapui installation location to lib folder
 
-   e.g. ./local-clean-install.sh
+cp /data/SmartBear/SoapUI-5.0.0/lib/*.jar /home/srbuser/soap-request-builder/lib
+5. Copy soapui executable jar file to lib folder
+ 
+cp /data/SmartBear/SoapUI-5.0.0/bin/soapui-5.0.0.jar /home/srbuser/soap-request-builder/lib
+6. Execute local installation shell script from soap-request-builder local location.
+
+./local-clean-install.sh
 
 #Your First SOAP Request
 
