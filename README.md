@@ -1,5 +1,5 @@
 #SOAP Request Builder
-A command line interface for soap request sending
+A command line interface for soap request sending.
 
 #Installation
 ##Prerequisites
@@ -12,6 +12,7 @@ A command line interface for soap request sending
     3. ant
     4. java
 2. Download soapui 5.0 and unzip to a tempory folder.
+
    e.g. /tmp/soapui/
 3. Pull the master branch of the soap-ui-builder software from github to a local folder.
    e.g. /home/srbuser/soap-ui-builder/
