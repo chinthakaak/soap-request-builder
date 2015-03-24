@@ -6,6 +6,8 @@ import com.eviware.soapui.impl.wsdl.WsdlOperation;
 import com.eviware.soapui.impl.wsdl.WsdlProject;
 import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlImporter;
 import com.eviware.soapui.model.iface.Operation;
+import com.eviware.soapui.SoapUI;
+import com.eviware.soapui.settings.ProxySettings;
 
 import java.io.File;
 import java.io.IOException;
