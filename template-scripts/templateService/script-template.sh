@@ -23,7 +23,8 @@ GREEN='\033[01;32m'
 BLUE='\033[01;34m'
 
 #sleep 2
-
+. ../../project.properties
+#echo $proxyserver
 sendrequest(){
     trap 'errorhandler ${LINENO} ${$?}'  err
     #. script-template.xmin
@@ -203,7 +204,7 @@ sendrequest(){
 
 #        if [[ $url == *"$result"* ]];
         then
-            curl -d @data/$bname-request.xml $url > data/$bname-response.xml -H "Content-Type:text/xml" --proxy ""
+            curl -d @data/$bname-request.xml $url > data/$bname-response.xml -H "Content-Type:text/xml" --proxy "$proxyserver:$proxyport"
 #            curl -d @data/$bname-request.xml $url > data/$bname-response.xml -H "Content-Type:text/xml" --proxy "10.30.1.30:3128"
 
             xmlstarlet tr ../../conf/nsremove.xsl data/$bname-response.xml > data/$bname-response-nons.xml
