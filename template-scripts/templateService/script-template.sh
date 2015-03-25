@@ -204,7 +204,7 @@ sendrequest(){
 
 #        if [[ $url == *"$result"* ]];
         then
-            curl -d @data/$bname-request.xml $url > data/$bname-response.xml -H "Content-Type:text/xml" --proxy "$proxyserver:$proxyport"
+            curl -d @data/$bname-request.xml $url > data/$bname-response.xml -H "Content-Type:text/xml" --noproxy "$bypassproxy" --proxy "$proxyserver:$proxyport"
 #            curl -d @data/$bname-request.xml $url > data/$bname-response.xml -H "Content-Type:text/xml" --proxy "10.30.1.30:3128"
 
             xmlstarlet tr ../../conf/nsremove.xsl data/$bname-response.xml > data/$bname-response-nons.xml
