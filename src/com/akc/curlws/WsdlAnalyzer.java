@@ -4,6 +4,7 @@ package com.akc.curlws;
 import com.eviware.soapui.impl.wsdl.WsdlInterface;
 import com.eviware.soapui.impl.wsdl.WsdlOperation;
 import com.eviware.soapui.impl.wsdl.WsdlProject;
+import com.eviware.soapui.impl.wsdl.support.http.ProxyUtils;
 import com.eviware.soapui.impl.wsdl.support.wsdl.WsdlImporter;
 import com.eviware.soapui.model.iface.Operation;
 import com.eviware.soapui.SoapUI;
@@ -20,9 +21,15 @@ public class WsdlAnalyzer {
     public static String REQUESTS_FOLDER="requests";
 
     public static void main(String[] endpoints) throws Exception {
+//        System.out.println("**********************"+SoapUI.getSettings().isSet(ProxySettings.ENABLE_PROXY));
         try {
             for (String endpoint : endpoints){
                 WsdlProject project = new WsdlProject();
+                SoapUI.getSettings().clearSetting( ProxySettings.HOST );
+                SoapUI.getSettings().clearSetting(ProxySettings.PORT);
+                SoapUI.getSettings().clearSetting(ProxySettings.ENABLE_PROXY);
+                SoapUI.saveSettings();
+                SoapUI.updateProxyFromSettings();
 
 //                SoapUI.getSettings().setString( ProxySettings.HOST, "10.30.1.30" );
 //                SoapUI.getSettings().setString( ProxySettings.PORT, "3128" );
