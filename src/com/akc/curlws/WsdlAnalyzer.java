@@ -11,18 +11,24 @@ import com.eviware.soapui.SoapUI;
 import com.eviware.soapui.settings.ProxySettings;
 
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.Arrays;
+import java.util.Properties;
 
 public class WsdlAnalyzer {
     public static boolean TESTMODE = false;
-    public static int URL_START_POSITION=3;
+    public static int URL_START_POSITION;
     public static String REQUESTS_FOLDER="requests";
 
     public static void main(String[] endpoints) throws Exception {
 //        System.out.println("**********************"+SoapUI.getSettings().isSet(ProxySettings.ENABLE_PROXY));
         try {
+            Properties properties = new Properties();
+            properties.load(new FileInputStream("project.properties"));
+            URL_START_POSITION=Integer.parseInt(properties.getProperty("foldertrimindex"));
+
             for (String endpoint : endpoints){
                 WsdlProject project = new WsdlProject();
 //                SoapUI.getSettings().clearSetting( ProxySettings.HOST );
