@@ -25,17 +25,21 @@ public class WsdlAnalyzer {
         try {
             for (String endpoint : endpoints){
                 WsdlProject project = new WsdlProject();
-                SoapUI.getSettings().clearSetting( ProxySettings.HOST );
-                SoapUI.getSettings().clearSetting(ProxySettings.PORT);
-                SoapUI.getSettings().clearSetting(ProxySettings.ENABLE_PROXY);
-                SoapUI.saveSettings();
-                SoapUI.updateProxyFromSettings();
-
+//                SoapUI.getSettings().clearSetting( ProxySettings.HOST );
+//                SoapUI.getSettings().clearSetting(ProxySettings.PORT);
+//                SoapUI.getSettings().clearSetting(ProxySettings.ENABLE_PROXY);
+//                SoapUI.saveSettings();
+//                SoapUI.updateProxyFromSettings();
+//
 //                SoapUI.getSettings().setString( ProxySettings.HOST, "10.30.1.30" );
 //                SoapUI.getSettings().setString( ProxySettings.PORT, "3128" );
 //                SoapUI.getSettings().setBoolean(ProxySettings.ENABLE_PROXY,true);
 //                SoapUI.saveSettings();
 //                SoapUI.updateProxyFromSettings();
+
+                SoapUI.importPreferences(new File("conf/settings.xml"));
+//                SoapUI.saveSettings();
+                SoapUI.updateProxyFromSettings();
 
                 WsdlInterface[] wsdls = WsdlImporter.importWsdl(project, endpoint+"?wsdl");
                 WsdlInterface wsdl = wsdls[0];
