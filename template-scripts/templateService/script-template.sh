@@ -358,7 +358,7 @@ main(){
 		    cp data/$bname.xmin data/$bname$1.xmin;
 		    cp data/$bname.xml data/$bname$1.xml;
 
-		    echo 0 > data/$bname-$1.index;
+		    echo 0 > data/$bname$1.index;
             exit 0;
 		;;
 
