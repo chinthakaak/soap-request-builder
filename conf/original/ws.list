@@ -1,0 +1,17 @@
+http://@host@:@port@/api-responder/consumerManagement
+http://@host@:@port@/api-responder/partnerProvisioning
+http://@host@:@port@/api-responder/serviceProviderManagement
+http://@host@:@port@/api-responder/userApplicationAccessManagement
+http://@host@:@port@/api-responder/campaignManagement
+http://@host@:@port@/api-responder/eventValidationManagement
+http://@host@:@port@/api-responder/mandateManagement
+http://@host@:@port@/api-responder/accountManagement
+http://@host@:@port@/api-responder/settlementManagement
+http://@host@:@port@/api-responder/rbacManagement
+http://@host@:@port@/api-responder/reportManagement
+http://@host@:@port@/api-responder/systemManagement
+http://@host@:@port@/api-responder/transactionManagement
+http://@host@:@port@/merchant-responder/merchantPayment/v2
+http://@host@:@port@/merchant-responder/merchantPayment/v1
+http://@host@:@port@/merchant-responder/merchantSubscription/v1
+http://@host@:@port@/merchant-responder/partnerPromotion/v1
