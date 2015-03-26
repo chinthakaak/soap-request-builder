@@ -350,6 +350,40 @@ main(){
             exit 0;
 		;;
 
+		-cl*)
+		    shift
+		    cp $bname.sh $bname$1.sh;
+		    cp data/$bname.index data/$bname$1.index;
+		    cp data/$bname.xall data/$bname$1.xall;
+		    cp data/$bname.xmin data/$bname$1.xmin;
+		    cp data/$bname.xml data/$bname$1.xml;
+
+		    echo 0 > data/$bname-$1.index;
+            exit 0;
+		;;
+
+		-rm*)
+		    shift
+		    while true; do
+                read -p "Do you wish to completely remove $bname$1.sh and all its data?" yn
+                case $yn in
+                    [Yy]* )
+                        rm -rf $bname$1.sh;
+                        rm -rf data/$bname$1.index;
+                        rm -rf data/$bname$1.xall;
+                        rm -rf data/$bname$1.xmin;
+                        rm -rf data/$bname$1.xml;
+                     break;;
+
+                    [Nn]* ) exit;;
+
+                    * ) echo "Please answer yes or no.";;
+                esac
+            done
+
+            exit 0;
+		;;
+
 		-l)
 		    shift
             printall $@
